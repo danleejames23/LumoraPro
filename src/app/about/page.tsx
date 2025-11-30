@@ -21,7 +21,8 @@ import {
   Calendar,
   MapPin,
   Mail,
-  Phone
+  Phone,
+  Coins
 } from 'lucide-react'
 
 export default function AboutPage() {
@@ -31,6 +32,7 @@ export default function AboutPage() {
     { name: 'TypeScript', level: 90, icon: Code },
     { name: 'Chatbots & AI Agents', level: 88, icon: Users },
     { name: 'Node.js & APIs', level: 88, icon: Database },
+    { name: 'Blockchain & Web3', level: 85, icon: Coins },
     { name: 'UI/UX Design', level: 85, icon: Palette },
     { name: 'Mobile Development', level: 80, icon: Smartphone },
     { name: 'E-commerce', level: 92, icon: Globe },
@@ -109,7 +111,7 @@ export default function AboutPage() {
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   A passionate full-stack developer and AI specialist with 6+ years of experience creating 
-                  beautiful websites, intelligent AI solutions, and automated systems that help businesses grow.
+                  beautiful websites, intelligent AI solutions, blockchain applications, and automated systems that help businesses grow.
                 </p>
               </div>
               
@@ -211,16 +213,16 @@ export default function AboutPage() {
             
             <p>
               Over the years, I've evolved from building simple static websites to creating 
-              complex web applications and intelligent AI solutions using modern technologies like React, Next.js, 
-              TypeScript, and cutting-edge AI frameworks. I've had the privilege of working with startups, 
+              complex web applications, intelligent AI solutions, and blockchain/Web3 applications using modern technologies like React, Next.js, 
+              TypeScript, cutting-edge AI frameworks, and smart contract development. I've had the privilege of working with startups, 
               established businesses, and everything in between.
             </p>
             
             <p>
               What drives me is the satisfaction of turning ideas into reality. Whether it's a 
               simple landing page that converts visitors into customers, a complex e-commerce 
-              platform that handles thousands of transactions, or an AI chatbot that provides 24/7 
-              customer support, I approach every project with the same level of dedication and attention to detail.
+              platform that handles thousands of transactions, an AI chatbot that provides 24/7 
+              customer support, or a blockchain solution for decentralized applications, I approach every project with the same level of dedication and attention to detail.
             </p>
             
             <p>

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Code, Palette, Server, Smartphone, Bot, Zap } from 'lucide-react'
+import { ArrowRight, Code, Palette, Server, Smartphone, Bot, Zap, Coins } from 'lucide-react'
 import { useState } from 'react'
 import QuoteTypeModal from '@/components/quote-type-modal'
 
@@ -14,6 +14,7 @@ const Hero = () => {
     { icon: Server, label: 'Backend' },
     { icon: Smartphone, label: 'Mobile' },
     { icon: Bot, label: 'AI Integration' },
+    { icon: Coins, label: 'Blockchain' },
     { icon: Palette, label: 'Design' },
     { icon: Zap, label: 'Performance' },
   ]
