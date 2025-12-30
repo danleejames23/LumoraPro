@@ -16,7 +16,7 @@ export const services: Service[] = [
       'Analytics Integration',
       'Social Media Integration'
     ],
-    startingPrice: 299,
+    startingPrice: 149,
     timeline: '3-5 days',
     icon: 'Target'
   },
@@ -34,7 +34,7 @@ export const services: Service[] = [
       'Google Analytics',
       '30 Days Support'
     ],
-    startingPrice: 599,
+    startingPrice: 399,
     timeline: '1-2 weeks',
     icon: 'Globe'
   },
@@ -50,7 +50,7 @@ export const services: Service[] = [
       'Contact Forms',
       'Social Media Integration'
     ],
-    startingPrice: 399,
+    startingPrice: 499,
     timeline: '1-2 weeks',
     icon: 'Paintbrush'
   },
@@ -68,7 +68,7 @@ export const services: Service[] = [
       'Content Management System',
       'Advanced Analytics Setup'
     ],
-    startingPrice: 799,
+    startingPrice: 599,
     timeline: '2-3 weeks',
     icon: 'Code'
   },
@@ -102,7 +102,7 @@ export const services: Service[] = [
       'Third-party Integrations',
       'Scalable Architecture'
     ],
-    startingPrice: 999,
+    startingPrice: 899,
     timeline: '3-6 weeks',
     icon: 'Server'
   },
@@ -134,7 +134,7 @@ export const services: Service[] = [
       'Customer Support Automation',
       'Analytics & Reporting'
     ],
-    startingPrice: 799,
+    startingPrice: 599,
     timeline: '1-2 weeks',
     icon: 'Bot'
   },
@@ -150,7 +150,7 @@ export const services: Service[] = [
       'Price Monitoring',
       'Custom Automation Workflows'
     ],
-    startingPrice: 1299,
+    startingPrice: 999,
     timeline: '2-3 weeks',
     icon: 'Zap'
   },
@@ -166,7 +166,7 @@ export const services: Service[] = [
       'Content Generation',
       'Sentiment Analysis'
     ],
-    startingPrice: 999,
+    startingPrice: 799,
     timeline: '2-4 weeks',
     icon: 'Brain'
   },
@@ -182,7 +182,7 @@ export const services: Service[] = [
       'App Store Deployment',
       'Backend Integration'
     ],
-    startingPrice: 1299,
+    startingPrice: 900,
     timeline: '6-12 weeks',
     icon: 'Smartphone'
   },
@@ -198,7 +198,7 @@ export const services: Service[] = [
       'Marketing Materials',
       'Design Systems'
     ],
-    startingPrice: 399,
+    startingPrice: 299,
     timeline: '1-3 weeks',
     icon: 'Palette'
   }

@@ -19,7 +19,7 @@ export const servicePackages: ServicePackage[] = [
     id: 'basic-landing',
     name: 'Landing Page',
     description: 'Perfect for startups and small businesses',
-    price: 100,
+    price: 99,
     originalPrice: 199,
     features: [
       'Single page responsive design',
@@ -106,7 +106,7 @@ export const servicePackages: ServicePackage[] = [
     id: 'advanced-ecommerce',
     name: 'Advanced E-commerce',
     description: 'Full-featured online store',
-    price: 550,
+    price: 649,
     originalPrice: 899,
     features: [
       'Unlimited products',
@@ -131,7 +131,7 @@ export const servicePackages: ServicePackage[] = [
     id: 'custom-webapp',
     name: 'Custom Web App',
     description: 'Tailored web application for your business',
-    price: 800,
+    price: 899,
     originalPrice: 1099,
     features: [
       'Custom functionality',
@@ -155,8 +155,8 @@ export const servicePackages: ServicePackage[] = [
     id: 'mobile-app',
     name: 'Mobile App',
     description: 'iOS and Android mobile application',
-    price: 899,
-    originalPrice: 1399,
+    price: 900,
+    originalPrice: 1199,
     features: [
       'iOS & Android apps',
       'Cross-platform development',

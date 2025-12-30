@@ -119,15 +119,6 @@ export default function AdminLoginPage() {
               Secure access to manage quotes, projects, clients, and business operations.
             </p>
             
-            {/* Admin Login Details */}
-            <div className="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg max-w-md mx-auto">
-              <h3 className="font-semibold text-yellow-800 mb-2">🔐 Admin Login Details</h3>
-              <div className="text-sm text-yellow-700">
-                <p><strong>Username:</strong> admin</p>
-                <p><strong>Password:</strong> admin123</p>
-                <p className="mt-2 text-xs">Use these credentials to access the admin dashboard</p>
-              </div>
-            </div>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">

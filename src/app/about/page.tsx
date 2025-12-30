@@ -40,32 +40,32 @@ export default function AboutPage() {
 
   const experience = [
     {
-      year: '2024',
-      title: 'Senior Full-Stack Developer & AI Specialist',
+      year: '2023-Present',
+      title: 'Senior Full-Stack Developer & AI/Web3 Specialist',
       company: 'Freelance',
-      description: 'Specializing in modern web applications and AI solutions. Building chatbots, AI agents, and intelligent automation systems alongside traditional web development.',
-      achievements: ['5+ successful projects', 'AI chatbots & agents', '100% client satisfaction', 'Average 4.9/5 rating']
+      description: 'Specializing in modern web applications, AI solutions, and blockchain development. Building chatbots, AI agents, smart contracts, and decentralized applications alongside traditional web development.',
+      achievements: ['13+ freelance projects', 'AI chatbots & agents', 'Blockchain & Web3', '100% client satisfaction']
     },
     {
-      year: '2022-2024',
-      title: 'Lead Frontend Developer',
+      year: '2019-2023',
+      title: 'Lead Full-Stack Developer',
       company: 'Tech Solutions Ltd',
-      description: 'Led a team of 5 developers building enterprise web applications. Implemented modern development practices and CI/CD pipelines.',
-      achievements: ['Team leadership', 'Enterprise applications', 'Modern dev practices']
+      description: 'Led a team of 8 developers building enterprise web applications, mobile apps, and Web3 integrations. Implemented modern development practices, CI/CD pipelines, and agile methodologies.',
+      achievements: ['Team leadership', 'Enterprise applications', 'Web3 & blockchain', 'Mobile development']
     },
     {
-      year: '2020-2022',
+      year: '2015-2019',
       title: 'Full-Stack Developer',
       company: 'Digital Agency',
-      description: 'Developed custom websites and web applications for various clients. Specialized in e-commerce and content management systems.',
-      achievements: ['Custom web solutions', 'E-commerce expertise', 'CMS development']
+      description: 'Developed custom websites, web applications, and e-commerce platforms for various clients. Built scalable solutions handling thousands of daily users.',
+      achievements: ['100+ websites delivered', 'E-commerce expertise', 'CMS development', 'API integrations']
     },
     {
-      year: '2018-2020',
+      year: '2012-2015',
       title: 'Junior Developer',
       company: 'StartUp Inc',
-      description: 'Started my professional journey building responsive websites and learning modern web technologies.',
-      achievements: ['Responsive design', 'Modern web tech', 'Rapid learning']
+      description: 'Started my professional journey building responsive websites and learning modern web technologies. Quickly progressed to handling full project lifecycles.',
+      achievements: ['Responsive design', 'Modern web tech', 'Rapid growth', 'Client management']
     }
   ]
 
@@ -110,7 +110,7 @@ export default function AboutPage() {
                   <span className="gradient-text">Daniel</span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  A passionate full-stack developer and AI specialist with 6+ years of experience creating 
+                  A passionate full-stack developer and AI specialist with 13+ years of experience creating 
                   beautiful websites, intelligent AI solutions, blockchain applications, and automated systems that help businesses grow.
                 </p>
               </div>
@@ -122,11 +122,11 @@ export default function AboutPage() {
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1">
                   <Calendar className="w-3 h-3 mr-1" />
-                  6+ Years Experience
+                  13+ Years Experience
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1">
                   <Star className="w-3 h-3 mr-1" />
-                  13+ Projects Delivered
+                  13+ Freelance Projects
                 </Badge>
               </div>
 
@@ -158,14 +158,14 @@ export default function AboutPage() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-4 bg-secondary/20 rounded-lg">
                       <div className="text-3xl font-bold text-primary">13+</div>
-                      <div className="text-sm text-muted-foreground">Projects Completed</div>
+                      <div className="text-sm text-muted-foreground">Freelance Projects</div>
                     </div>
                     <div className="text-center p-4 bg-secondary/20 rounded-lg">
                       <div className="text-3xl font-bold text-primary">100%</div>
                       <div className="text-sm text-muted-foreground">Client Satisfaction</div>
                     </div>
                     <div className="text-center p-4 bg-secondary/20 rounded-lg">
-                      <div className="text-3xl font-bold text-primary">6+</div>
+                      <div className="text-3xl font-bold text-primary">13+</div>
                       <div className="text-sm text-muted-foreground">Years Experience</div>
                     </div>
                     <div className="text-center p-4 bg-secondary/20 rounded-lg">
@@ -206,7 +206,7 @@ export default function AboutPage() {
             className="prose prose-lg max-w-none text-muted-foreground space-y-6"
           >
             <p>
-              My journey into web development started 6 years ago when I built my first website 
+              My journey into web development started over 13 years ago when I built my first website 
               using HTML and CSS. What began as curiosity quickly turned into passion as I 
               discovered the power of creating digital experiences that solve real problems.
             </p>

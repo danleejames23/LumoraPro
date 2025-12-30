@@ -72,23 +72,58 @@
 - [ ] Performance monitoring
 - [ ] Security updates
 
-## Environment Variables (if needed)
+## Database Setup (Required for Netlify)
+
+**Important**: This app requires a PostgreSQL database. For Netlify deployment, use a cloud PostgreSQL provider.
+
+### Recommended: Supabase (Free)
+See **[SUPABASE-SETUP.md](./SUPABASE-SETUP.md)** for detailed setup instructions.
+
+Quick steps:
+1. Create a free account at [supabase.com](https://supabase.com)
+2. Create a new project and save your database password
+3. Run `database/init.sql` in Supabase SQL Editor
+4. Copy the connection string from Settings → Database → Connection string → URI
+5. Add `DATABASE_URL` to Netlify environment variables
+
+### Alternative: Neon (Free)
+1. Create account at [neon.tech](https://neon.tech)
+2. Create a new project
+3. Run `database/init.sql` in the SQL Editor
+4. Copy connection string and add to Netlify
+
+## Environment Variables
 
 Create a `.env.local` file for local development:
 
 ```env
-# Analytics
+# Database (Required - use Supabase or Neon for production)
+DATABASE_URL=postgresql://postgres.[project-ref]:[password]@aws-0-[region].pooler.supabase.com:6543/postgres
+
+# Security (Required)
+JWT_SECRET=your-super-secret-jwt-key-minimum-32-characters-long
+
+# App Configuration
+NEXT_PUBLIC_BASE_URL=https://your-site.netlify.app
+ADMIN_EMAIL=admin@yourdomain.com
+NODE_ENV=production
+
+# Email Service (Optional - for notifications)
+SENDGRID_API_KEY=your_sendgrid_api_key
+FROM_EMAIL=noreply@yourdomain.com
+FROM_NAME=Your Business Name
+
+# Analytics (Optional)
 NEXT_PUBLIC_GA_ID=your_google_analytics_id
-
-# Contact Form (if using external service)
-CONTACT_FORM_ENDPOINT=your_form_endpoint
-
-# Database (if adding backend features)
-DATABASE_URL=your_database_url
-
-# Email Service (if adding email notifications)
-EMAIL_SERVICE_API_KEY=your_email_api_key
 ```
+
+### Netlify Environment Variables
+Add these in Netlify Dashboard → Site settings → Environment variables:
+- `DATABASE_URL` - Your Supabase/Neon connection string
+- `JWT_SECRET` - Random 32+ character string
+- `NEXT_PUBLIC_BASE_URL` - Your Netlify site URL
+- `ADMIN_EMAIL` - Admin email address
+- `NODE_ENV` - Set to `production`
 
 ## Performance Targets
 

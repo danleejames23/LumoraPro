@@ -1,4 +1,4 @@
-// Production database layer with PostgreSQL
+// Production database layer with PostgreSQL (works with Supabase, Neon, or any PostgreSQL provider)
 import { Pool, PoolClient } from 'pg'
 
 // Database connection pool
@@ -6,19 +6,27 @@ let pool: Pool | null = null
 
 export function getPool(): Pool {
   if (!pool) {
+    const connectionString = process.env.DATABASE_URL || 'postgresql://freelance_user:freelance_password_2024@localhost:5434/freelance_website'
+    
+    // Detect if we're using a cloud PostgreSQL provider (Supabase, Neon, etc.)
+    const isCloudDatabase = connectionString.includes('supabase.co') || 
+                            connectionString.includes('neon.tech') || 
+                            connectionString.includes('pooler.supabase.com') ||
+                            process.env.NODE_ENV === 'production'
+    
     pool = new Pool({
-      connectionString: process.env.DATABASE_URL || 'postgresql://freelance_user:freelance_password_2024@localhost:5434/freelance_website',
-      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-      max: 20,
-      idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 10000, // Increased from 2000ms to 10000ms
+      connectionString,
+      ssl: isCloudDatabase ? { rejectUnauthorized: false } : false,
+      max: isCloudDatabase ? 10 : 20, // Lower pool size for serverless
+      idleTimeoutMillis: isCloudDatabase ? 20000 : 30000,
+      connectionTimeoutMillis: 10000,
     })
     
     pool.on('error', (err: Error) => {
       console.error('Unexpected error on idle client', err)
     })
     
-    console.log('✅ PostgreSQL connection pool created')
+    console.log('✅ PostgreSQL connection pool created', isCloudDatabase ? '(cloud mode)' : '(local mode)')
   }
   
   return pool

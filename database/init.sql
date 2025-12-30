@@ -242,8 +242,8 @@ BEGIN
     SELECT id INTO sample_customer_id FROM customers WHERE email = 'john.doe@example.com';
     
     -- Sample quote
-    INSERT INTO quotes (customer_id, name, email, company, description, estimated_cost, estimated_timeline, status) VALUES 
-    (sample_customer_id, 'John Doe', 'john.doe@example.com', 'Doe Enterprises', 'Need a business website with e-commerce functionality', 899.00, '7-10 days', 'accepted');
+    INSERT INTO quotes (quote_id, customer_id, name, email, company, description, estimated_cost, estimated_timeline, status) VALUES 
+    ('QT-2024-001', sample_customer_id, 'John Doe', 'john.doe@example.com', 'Doe Enterprises', 'Need a business website with e-commerce functionality', 899.00, '7-10 days', 'accepted');
     
     -- Sample project
     INSERT INTO projects (customer_id, name, description, status, start_date) VALUES 
