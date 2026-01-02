@@ -19,17 +19,17 @@ export const servicePackages: ServicePackage[] = [
     id: 'basic-landing',
     name: 'Landing Page',
     description: 'Perfect for startups and small businesses',
-    price: 99,
-    originalPrice: 199,
+    price: 149,
+    originalPrice: 249,
     features: [
       'Single page responsive design',
       'Contact form integration',
       'Mobile optimized',
       'Basic SEO setup',
       'Social media links',
-      '1 revision round'
+      '2 revision rounds'
     ],
-    deliveryTime: '2-3 days',
+    deliveryTime: '1-2 days',
     category: 'website',
     complexity: 'basic',
     icon: '🌐',
@@ -39,8 +39,8 @@ export const servicePackages: ServicePackage[] = [
     id: 'business-website',
     name: 'Business Website',
     description: 'Multi-page website for established businesses',
-    price: 250,
-    originalPrice: 399,
+    price: 349,
+    originalPrice: 499,
     features: [
       'Up to 5 pages',
       'Custom responsive design',
@@ -48,9 +48,9 @@ export const servicePackages: ServicePackage[] = [
       'SEO optimization',
       'Analytics setup',
       'Content management',
-      '2 revision rounds'
+      '3 revision rounds'
     ],
-    deliveryTime: '5-7 days',
+    deliveryTime: '3-5 days',
     popular: true,
     category: 'website',
     complexity: 'standard',
@@ -61,19 +61,19 @@ export const servicePackages: ServicePackage[] = [
     id: 'premium-website',
     name: 'Premium Website',
     description: 'Advanced website with custom features',
-    price: 499,
-    originalPrice: 699,
+    price: 599,
+    originalPrice: 799,
     features: [
-      'Unlimited pages',
+      'Up to 10 pages',
       'Custom animations',
       'Advanced SEO',
       'Performance optimization',
       'Security features',
       'Blog system',
       'Admin dashboard',
-      '3 revision rounds'
+      'Unlimited revisions'
     ],
-    deliveryTime: '7-10 days',
+    deliveryTime: '5-7 days',
     category: 'website',
     complexity: 'premium',
     icon: '✨',
@@ -82,44 +82,66 @@ export const servicePackages: ServicePackage[] = [
 
   // E-commerce Packages
   {
-    id: 'basic-shop',
-    name: 'Basic Online Shop',
-    description: 'Start selling online with essential features',
-    price: 350,
-    originalPrice: 549,
+    id: 'starter-shop',
+    name: 'Starter Shop',
+    description: 'Get your products online quickly',
+    price: 299,
+    originalPrice: 449,
     features: [
-      'Up to 50 products',
-      'Payment processing (Stripe)',
+      'Up to 25 products',
+      'Stripe/PayPal integration',
+      'Basic inventory',
+      'Order notifications',
+      'Mobile responsive',
+      '2 revision rounds'
+    ],
+    deliveryTime: '3-5 days',
+    category: 'ecommerce',
+    complexity: 'basic',
+    icon: '🛍️',
+    color: 'from-green-500 to-emerald-500'
+  },
+  {
+    id: 'business-shop',
+    name: 'Business Shop',
+    description: 'Full-featured online store for growing businesses',
+    price: 549,
+    originalPrice: 749,
+    features: [
+      'Up to 100 products',
+      'Multi-payment options',
       'Inventory management',
       'Order tracking',
       'Customer accounts',
-      'Mobile responsive',
-      'Basic analytics'
+      'Discount codes',
+      'Analytics dashboard',
+      '3 revision rounds'
     ],
-    deliveryTime: '7-10 days',
+    deliveryTime: '5-7 days',
+    popular: true,
     category: 'ecommerce',
     complexity: 'standard',
     icon: '🛒',
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-teal-500 to-green-500'
   },
   {
     id: 'advanced-ecommerce',
     name: 'Advanced E-commerce',
-    description: 'Full-featured online store',
-    price: 649,
-    originalPrice: 899,
+    description: 'Enterprise-level online store',
+    price: 899,
+    originalPrice: 1199,
     features: [
       'Unlimited products',
-      'Multi-payment options',
+      'Multi-payment gateways',
       'Advanced inventory',
       'Discount & coupon system',
       'Email marketing integration',
       'Advanced analytics',
       'Multi-currency support',
-      'Admin dashboard'
+      'Admin dashboard',
+      'Unlimited revisions'
     ],
-    deliveryTime: '10-14 days',
-    popular: true,
+    deliveryTime: '7-10 days',
     category: 'ecommerce',
     complexity: 'premium',
     icon: '🏪',
@@ -128,22 +150,43 @@ export const servicePackages: ServicePackage[] = [
 
   // Web App Packages
   {
+    id: 'basic-webapp',
+    name: 'Basic Web App',
+    description: 'Simple web application with core features',
+    price: 499,
+    originalPrice: 699,
+    features: [
+      'User authentication',
+      'Database integration',
+      'Basic dashboard',
+      'Responsive design',
+      'Cloud deployment',
+      '3 revision rounds'
+    ],
+    deliveryTime: '5-7 days',
+    category: 'webapp',
+    complexity: 'standard',
+    icon: '💻',
+    color: 'from-blue-500 to-indigo-500'
+  },
+  {
     id: 'custom-webapp',
     name: 'Custom Web App',
     description: 'Tailored web application for your business',
-    price: 899,
-    originalPrice: 1099,
+    price: 999,
+    originalPrice: 1299,
     features: [
       'Custom functionality',
-      'User authentication',
+      'User authentication & roles',
       'Database integration',
       'API development',
       'Admin panel',
       'Real-time features',
       'Cloud deployment',
-      'Ongoing support'
+      '30 days support'
     ],
-    deliveryTime: '14-21 days',
+    deliveryTime: '7-14 days',
+    popular: true,
     category: 'webapp',
     complexity: 'premium',
     icon: '⚙️',
@@ -152,26 +195,49 @@ export const servicePackages: ServicePackage[] = [
 
   // Mobile App Packages
   {
-    id: 'mobile-app',
-    name: 'Mobile App',
-    description: 'iOS and Android mobile application',
-    price: 900,
-    originalPrice: 1199,
+    id: 'mobile-app-basic',
+    name: 'Mobile App Basic',
+    description: 'Cross-platform mobile app with essential features',
+    price: 799,
+    originalPrice: 999,
+    features: [
+      'iOS & Android (React Native)',
+      'Up to 5 screens',
+      'User authentication',
+      'Push notifications',
+      'Basic backend',
+      'App store submission guide',
+      '30 days support'
+    ],
+    deliveryTime: '7-10 days',
+    category: 'mobile',
+    complexity: 'standard',
+    icon: '📱',
+    color: 'from-teal-500 to-blue-500'
+  },
+  {
+    id: 'mobile-app-premium',
+    name: 'Mobile App Premium',
+    description: 'Full-featured iOS and Android application',
+    price: 1499,
+    originalPrice: 1999,
     features: [
       'iOS & Android apps',
-      'Cross-platform development',
+      'Unlimited screens',
       'Push notifications',
       'Offline functionality',
       'App store submission',
       'Backend integration',
       'Analytics tracking',
-      '6 months support'
+      'Admin dashboard',
+      '60 days support'
     ],
-    deliveryTime: '21-30 days',
+    deliveryTime: '14-21 days',
+    popular: true,
     category: 'mobile',
     complexity: 'premium',
-    icon: '📱',
-    color: 'from-teal-500 to-blue-500'
+    icon: '📲',
+    color: 'from-violet-500 to-purple-500'
   },
 
   // AI Services Packages
@@ -179,19 +245,18 @@ export const servicePackages: ServicePackage[] = [
     id: 'ai-chatbot',
     name: 'AI Chatbot',
     description: 'Intelligent chatbot for customer support & engagement',
-    price: 250,
-    originalPrice: 499,
+    price: 299,
+    originalPrice: 449,
     features: [
       'Custom AI training on your data',
       'Natural language processing',
-      'Multi-platform integration',
-      'Analytics dashboard',
-      'Lead generation features',
-      'Knowledge base integration',
-      'Handoff to human agents',
-      '3 months support'
+      'Website integration',
+      'Lead capture forms',
+      'Conversation analytics',
+      'Easy customization',
+      '30 days support'
     ],
-    deliveryTime: '3-7 days',
+    deliveryTime: '2-4 days',
     popular: true,
     category: 'ai',
     complexity: 'standard',
@@ -199,69 +264,66 @@ export const servicePackages: ServicePackage[] = [
     color: 'from-cyan-500 to-blue-500'
   },
   {
-    id: 'ai-web-agent',
-    name: 'AI Website Agent',
-    description: 'Autonomous AI agent for website automation',
-    price: 699,
-    originalPrice: 899,
-    features: [
-      'Custom AI agent development',
-      'Website automation tasks',
-      'Data extraction & analysis',
-      'Scheduled operations',
-      'Integration with existing systems',
-      'Performance monitoring',
-      'Custom reporting',
-      '6 months support'
-    ],
-    deliveryTime: '7-14 days',
-    category: 'ai',
-    complexity: 'premium',
-    icon: '🕷️',
-    color: 'from-purple-500 to-indigo-500'
-  },
-  {
     id: 'ai-app-integration',
-    name: 'AI App Integration',
+    name: 'AI Integration',
     description: 'Add AI capabilities to your existing applications',
-    price: 499,
-    originalPrice: 699,
+    price: 449,
+    originalPrice: 599,
     features: [
       'GPT/Claude API integration',
       'Custom AI workflows',
-      'Image/document processing',
-      'Voice recognition features',
-      'Sentiment analysis',
       'Content generation',
+      'Document processing',
       'API development',
-      '3 months support'
+      'Documentation',
+      '30 days support'
     ],
-    deliveryTime: '5-10 days',
+    deliveryTime: '3-5 days',
     category: 'ai',
     complexity: 'standard',
     icon: '🧠',
     color: 'from-emerald-500 to-teal-500'
   },
   {
+    id: 'ai-automation',
+    name: 'AI Automation',
+    description: 'Automate business processes with AI',
+    price: 699,
+    originalPrice: 899,
+    features: [
+      'Custom AI agent development',
+      'Process automation',
+      'Data extraction & analysis',
+      'Scheduled operations',
+      'Integration with existing systems',
+      'Performance monitoring',
+      '60 days support'
+    ],
+    deliveryTime: '5-7 days',
+    category: 'ai',
+    complexity: 'premium',
+    icon: '⚡',
+    color: 'from-purple-500 to-indigo-500'
+  },
+  {
     id: 'custom-ai-solution',
     name: 'Custom AI Solution',
     description: 'Bespoke AI application tailored to your needs',
-    price: 1499,
-    originalPrice: 1799,
+    price: 1299,
+    originalPrice: 1699,
     features: [
       'Full AI application development',
-      'Machine learning models',
-      'Custom training datasets',
+      'Custom model training',
       'Advanced analytics',
       'Scalable cloud deployment',
       'Admin dashboard',
       'API documentation',
-      '12 months support'
+      '90 days support'
     ],
-    deliveryTime: '14-30 days',
+    deliveryTime: '10-14 days',
     category: 'ai',
     complexity: 'premium',
-    icon: '⚡',
+    icon: '🚀',
     color: 'from-orange-500 to-red-500'
   },
 
@@ -270,8 +332,8 @@ export const servicePackages: ServicePackage[] = [
     id: 'website-redesign',
     name: 'Website Redesign',
     description: 'Refresh your existing website',
-    price: 199,
-    originalPrice: 349,
+    price: 249,
+    originalPrice: 399,
     features: [
       'Modern design update',
       'Mobile optimization',
@@ -280,7 +342,7 @@ export const servicePackages: ServicePackage[] = [
       'Content migration',
       '2 revision rounds'
     ],
-    deliveryTime: '3-5 days',
+    deliveryTime: '2-4 days',
     category: 'website',
     complexity: 'standard',
     icon: '🎨',
@@ -290,20 +352,40 @@ export const servicePackages: ServicePackage[] = [
     id: 'maintenance-package',
     name: 'Website Maintenance',
     description: 'Monthly website maintenance and updates',
-    price: 99,
+    price: 79,
     features: [
       'Security updates',
-      'Content updates',
+      'Content updates (up to 5/month)',
       'Performance monitoring',
       'Backup management',
-      'Technical support',
+      'Priority support',
       'Monthly reports'
     ],
-    deliveryTime: 'Ongoing',
+    deliveryTime: 'Monthly',
     category: 'custom',
     complexity: 'basic',
     icon: '🔧',
     color: 'from-gray-500 to-slate-500'
+  },
+  {
+    id: 'seo-package',
+    name: 'SEO Optimization',
+    description: 'Boost your search engine rankings',
+    price: 199,
+    originalPrice: 299,
+    features: [
+      'Technical SEO audit',
+      'On-page optimization',
+      'Meta tags & descriptions',
+      'Site speed optimization',
+      'Google Search Console setup',
+      'SEO report'
+    ],
+    deliveryTime: '2-3 days',
+    category: 'custom',
+    complexity: 'basic',
+    icon: '🔍',
+    color: 'from-green-500 to-teal-500'
   }
 ]
 

@@ -1593,12 +1593,17 @@ export default function AdvancedAdminDashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-deep-space via-space-gray to-deep-space">
+      <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-cyber-mint border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-          <p className="text-silver-glow font-accent text-lg">Loading Dashboard...</p>
+          <div className="relative w-16 h-16 mx-auto mb-6">
+            <div className="absolute inset-0 rounded-full border-4 border-slate-700"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-500 animate-spin"></div>
+            <div className="absolute inset-2 rounded-full border-4 border-transparent border-t-purple-500 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+          </div>
+          <h2 className="text-xl font-semibold text-white mb-2">Loading Dashboard</h2>
+          <p className="text-slate-400">Preparing your workspace...</p>
         </div>
-      </div>
+      </main>
     )
   }
 
@@ -1607,8 +1612,8 @@ export default function AdvancedAdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-deep-space via-space-gray to-deep-space">
-      {/* Futuristic Sidebar */}
+    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      {/* Sidebar */}
       <FuturisticSidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -1616,42 +1621,43 @@ export default function AdvancedAdminDashboard() {
         unreadMessages={stats.unreadMessages}
         pendingQuotes={stats.pendingQuotes}
         newInquiries={stats.unreadInquiries}
+        admin={admin}
       />
 
       {/* Main Content Area */}
-      <div className="lg:ml-64 min-h-screen pt-16 lg:pt-0">
-        {/* Cosmic Background Elements */}
-        <div className="fixed inset-0 pointer-events-none -z-10">
-          <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-gradient-to-br from-neon-purple/10 to-cyber-mint/5 rounded-full blur-3xl animate-cosmic-drift"></div>
-          <div className="absolute bottom-1/4 left-1/2 w-80 h-80 bg-gradient-to-br from-cosmic-blue/8 to-plasma-pink/5 rounded-full blur-2xl animate-cosmic-drift" style={{animationDelay: '10s'}}></div>
-        </div>
-
-        <div className="relative z-10 p-4 lg:p-8">
-          {/* Welcome Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
-            <div className="glass-card p-6 rounded-2xl border border-neon-purple/20">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h1 className="text-2xl font-bold text-silver-glow font-accent mb-2">
-                    Welcome back, <span className="text-cyber-mint">Admin - Daniel James</span>
-                  </h1>
-                  <p className="text-muted-foreground">
-                    System operational • {new Date().toLocaleDateString('en-US', { 
-                      weekday: 'long', 
-                      year: 'numeric', 
-                      month: 'long', 
-                      day: 'numeric' 
-                    })}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+      <div className="lg:ml-64 pt-16 lg:pt-0 pb-20 lg:pb-0 min-h-screen">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+          {/* Page Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <h1 className="text-2xl lg:text-3xl font-bold text-white">
+                {activeTab === 'overview' && `Welcome back, ${admin?.username || 'Admin'}!`}
+                {activeTab === 'quotes' && 'Quote Management'}
+                {activeTab === 'projects' && 'Project Management'}
+                {activeTab === 'customers' && 'Client Management'}
+                {activeTab === 'inquiries' && 'Inquiries'}
+                {activeTab === 'messages' && 'Messages'}
+                {activeTab === 'invoices' && 'Invoices'}
+                {activeTab === 'payments' && 'Payments'}
+                {activeTab === 'analytics' && 'Analytics & Reports'}
+              </h1>
+              <p className="text-slate-400 mt-1 text-sm lg:text-base">
+                {activeTab === 'overview' && 'Here\'s your business overview'}
+                {activeTab === 'quotes' && 'Manage and respond to client quote requests'}
+                {activeTab === 'projects' && 'Track and manage active projects'}
+                {activeTab === 'customers' && 'View and manage your clients'}
+                {activeTab === 'inquiries' && 'Handle incoming inquiries'}
+                {activeTab === 'messages' && 'Communicate with your clients'}
+                {activeTab === 'invoices' && 'Manage invoices and billing'}
+                {activeTab === 'payments' && 'Track payment history'}
+                {activeTab === 'analytics' && 'View business insights and reports'}
+              </p>
+            </motion.div>
+          </div>
 
           {/* Tab Content */}
           <AnimatePresence mode="wait">
@@ -4208,6 +4214,6 @@ export default function AdvancedAdminDashboard() {
         )}
       </AnimatePresence>
       
-    </div>
+    </main>
   )
 }

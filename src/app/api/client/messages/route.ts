@@ -92,23 +92,9 @@ export async function POST(request: NextRequest) {
     const client = await getDatabase()
 
     try {
-      await client.query(`
-        CREATE TABLE IF NOT EXISTS messages (
-          id SERIAL PRIMARY KEY,
-          customer_id UUID,
-          subject VARCHAR(255) NOT NULL,
-          message TEXT NOT NULL,
-          is_from_admin BOOLEAN DEFAULT FALSE,
-          is_read BOOLEAN DEFAULT FALSE,
-          attachments JSONB,
-          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-          updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
-      `)
-
       const result = await client.query(
-        `INSERT INTO messages (customer_id, subject, message, is_from_admin, attachments, created_at, updated_at)
-         VALUES ($1, $2, $3, FALSE, '[]'::jsonb, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+        `INSERT INTO messages (customer_id, sender_type, sender_id, subject, message, is_read)
+         VALUES ($1, 'customer', $1, $2, $3, FALSE)
          RETURNING *`,
         [customer_id, subject || 'Chat Message', message]
       )

@@ -87,7 +87,7 @@ import {
   SkipBack, SkipForward, Rewind, FastForward, Repeat, Repeat1, Shuffle, Volume, Volume1, VolumeOff,
   Play, Pause, Power, PowerOff, Sun, Moon, Cloud, CloudRain,
   CloudSnow, CloudLightning, Umbrella, Wind, Droplets, EyeOff, Glasses, Lightbulb, Flashlight,
-  Home, Building2, Linkedin, Twitter, ArrowRight
+  Home, Building2, Linkedin, Twitter, ArrowRight, Code as CodeIcon
 } from 'lucide-react'
 import { formatCurrency } from '@/lib/utils'
 
@@ -1150,8 +1150,8 @@ export default function ClientDashboard() {
         {/* Logo Area */}
         <div className="p-6 border-b border-slate-800">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">L</span>
+            <div className="p-2 bg-primary rounded-lg">
+              <CodeIcon className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
               <h1 className="font-bold text-white">Lumora Pro</h1>
@@ -1206,8 +1206,8 @@ export default function ClientDashboard() {
       {/* Mobile Header */}
       <header className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-slate-900/95 backdrop-blur-xl border-b border-slate-800 z-40 px-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
-            <span className="text-white font-bold text-sm">L</span>
+          <div className="p-2 bg-primary rounded-lg">
+            <CodeIcon className="h-5 w-5 text-primary-foreground" />
           </div>
           <span className="font-semibold text-white">Lumora Pro</span>
         </div>

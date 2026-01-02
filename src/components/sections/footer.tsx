@@ -1,8 +1,17 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Code, Mail, Phone, MapPin, Github } from 'lucide-react'
 
 const Footer = () => {
+  const pathname = usePathname()
   const currentYear = new Date().getFullYear()
+
+  // Hide footer on client portal and admin pages
+  if (pathname?.startsWith('/client/dashboard') || pathname?.startsWith('/admin/dashboard')) {
+    return null
+  }
 
   const footerLinks = {
     services: [

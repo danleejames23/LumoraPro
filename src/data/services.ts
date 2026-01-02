@@ -14,192 +14,202 @@ export const services: Service[] = [
       'Fast Loading Speed',
       'SEO Optimization',
       'Analytics Integration',
-      'Social Media Integration'
+      '2 Revision Rounds'
     ],
     startingPrice: 149,
-    timeline: '3-5 days',
+    timeline: '1-2 days',
     icon: 'Target'
   },
   {
     id: 'basic-website',
-    title: 'Basic Website',
+    title: 'Business Website',
     description: 'Professional multi-page websites perfect for small businesses and portfolios.',
     features: [
       'Up to 5 Pages',
       'Responsive Design',
-      'Contact Forms',
-      'Basic SEO Setup',
+      'Contact Forms & Maps',
+      'SEO Optimization',
       'Mobile Optimization',
-      'Social Media Links',
-      'Google Analytics',
-      '30 Days Support'
+      'Analytics Setup',
+      'Content Management',
+      '3 Revision Rounds'
     ],
-    startingPrice: 399,
-    timeline: '1-2 weeks',
+    startingPrice: 349,
+    timeline: '3-5 days',
     icon: 'Globe'
   },
   {
     id: 'custom-website-development',
-    title: 'Custom Website Development',
-    description: 'Tailored websites designed specifically for your business needs and brand identity.',
+    title: 'Premium Website',
+    description: 'Advanced websites with custom features, animations, and admin dashboards.',
     features: [
-      'Custom Design & Development',
-      'Brand-Focused Design',
-      'Responsive Layout',
-      'Basic SEO Setup',
-      'Contact Forms',
-      'Social Media Integration'
+      'Up to 10 Pages',
+      'Custom Animations',
+      'Advanced SEO',
+      'Performance Optimization',
+      'Security Features',
+      'Blog System',
+      'Admin Dashboard',
+      'Unlimited Revisions'
     ],
-    startingPrice: 499,
-    timeline: '1-2 weeks',
+    startingPrice: 599,
+    timeline: '5-7 days',
     icon: 'Paintbrush'
   },
   {
     id: 'frontend-development',
-    title: 'Frontend Development',
-    description: 'Advanced, responsive websites built with React, Next.js, and cutting-edge technologies.',
+    title: 'Website Redesign',
+    description: 'Refresh your existing website with modern design and improved performance.',
     features: [
-      'Modern React/Next.js Development',
-      'Advanced UI/UX Design',
-      'Performance Optimization',
-      'SEO-Friendly Architecture',
+      'Modern Design Update',
+      'Mobile Optimization',
+      'Speed Improvements',
+      'SEO Enhancements',
+      'Content Migration',
       'Cross-Browser Compatible',
-      'Mobile-First Approach',
-      'Content Management System',
-      'Advanced Analytics Setup'
+      'Analytics Setup',
+      '2 Revision Rounds'
     ],
-    startingPrice: 599,
-    timeline: '2-3 weeks',
+    startingPrice: 249,
+    timeline: '2-4 days',
     icon: 'Code'
   },
   {
     id: 'backend-development',
-    title: 'Backend Development',
-    description: 'Robust server-side applications, APIs, and database systems built with modern technologies.',
+    title: 'Basic Web App',
+    description: 'Simple web application with user authentication and database integration.',
     features: [
-      'RESTful API Development',
-      'Database Design & Optimization',
-      'User Authentication & Authorization',
-      'Third-party API Integrations',
-      'Cloud Deployment & Scaling',
-      'Security Implementation',
-      'Performance Optimization',
-      'Documentation & Testing'
+      'User Authentication',
+      'Database Integration',
+      'Basic Dashboard',
+      'Responsive Design',
+      'Cloud Deployment',
+      'API Development',
+      'Security Features',
+      '3 Revision Rounds'
     ],
-    startingPrice: 699,
-    timeline: '2-4 weeks',
+    startingPrice: 499,
+    timeline: '5-7 days',
     icon: 'Server'
   },
   {
     id: 'fullstack-development',
-    title: 'Full-Stack Development',
-    description: 'Complete web applications with both frontend and backend, including databases and APIs.',
+    title: 'Custom Web App',
+    description: 'Tailored web application with custom functionality and admin panel.',
     features: [
-      'Custom Backend APIs',
-      'Database Design',
-      'User Authentication',
-      'Admin Dashboards',
-      'Third-party Integrations',
-      'Scalable Architecture'
+      'Custom Functionality',
+      'User Authentication & Roles',
+      'Database Integration',
+      'API Development',
+      'Admin Panel',
+      'Real-time Features',
+      'Cloud Deployment',
+      '30 Days Support'
     ],
-    startingPrice: 899,
-    timeline: '3-6 weeks',
+    startingPrice: 999,
+    timeline: '7-14 days',
     icon: 'Server'
   },
   {
     id: 'ecommerce-solutions',
-    title: 'E-Commerce Solutions',
+    title: 'E-Commerce Store',
     description: 'Complete online stores with payment processing, inventory management, and admin panels.',
     features: [
-      'Payment Integration',
+      'Up to 100 Products',
+      'Stripe/PayPal Integration',
       'Inventory Management',
-      'Order Processing',
+      'Order Tracking',
       'Customer Accounts',
+      'Discount Codes',
       'Analytics Dashboard',
-      'Mobile Commerce'
+      '3 Revision Rounds'
     ],
-    startingPrice: 799,
-    timeline: '4-8 weeks',
+    startingPrice: 549,
+    timeline: '5-7 days',
     icon: 'ShoppingCart'
   },
   {
     id: 'ai-chatbots',
-    title: 'AI Chatbots & Agents',
-    description: 'Intelligent chatbots and autonomous agents that handle customer support, lead generation, and task automation.',
+    title: 'AI Chatbot',
+    description: 'Intelligent chatbot for customer support, lead generation, and engagement.',
     features: [
       'Custom AI Training',
       'Natural Language Processing',
-      'Multi-platform Integration',
-      'Lead Generation',
-      'Customer Support Automation',
-      'Analytics & Reporting'
+      'Website Integration',
+      'Lead Capture Forms',
+      'Conversation Analytics',
+      'Easy Customization',
+      '30 Days Support'
     ],
-    startingPrice: 599,
-    timeline: '1-2 weeks',
+    startingPrice: 299,
+    timeline: '2-4 days',
     icon: 'Bot'
   },
   {
     id: 'ai-web-agents',
-    title: 'AI Web Agents',
-    description: 'Autonomous AI agents that perform web scraping, data extraction, monitoring, and automated tasks.',
+    title: 'AI Automation',
+    description: 'Automate business processes with custom AI agents and workflows.',
     features: [
-      'Web Scraping & Monitoring',
+      'Custom AI Agent Development',
+      'Process Automation',
       'Data Extraction & Analysis',
-      'Automated Reporting',
-      'Competitor Analysis',
-      'Price Monitoring',
-      'Custom Automation Workflows'
+      'Scheduled Operations',
+      'System Integration',
+      'Performance Monitoring',
+      '60 Days Support'
     ],
-    startingPrice: 999,
-    timeline: '2-3 weeks',
+    startingPrice: 699,
+    timeline: '5-7 days',
     icon: 'Zap'
   },
   {
     id: 'ai-integration',
-    title: 'AI App Integration',
-    description: 'Add AI capabilities to your existing applications with GPT, Claude, and custom AI models.',
+    title: 'AI Integration',
+    description: 'Add AI capabilities to your existing applications with GPT, Claude, and custom models.',
     features: [
       'GPT/Claude API Integration',
       'Custom AI Workflows',
-      'Document Processing',
-      'Image & Voice Recognition',
       'Content Generation',
-      'Sentiment Analysis'
+      'Document Processing',
+      'API Development',
+      'Documentation',
+      '30 Days Support'
     ],
-    startingPrice: 799,
-    timeline: '2-4 weeks',
+    startingPrice: 449,
+    timeline: '3-5 days',
     icon: 'Brain'
   },
   {
     id: 'mobile-development',
-    title: 'Mobile Development',
-    description: 'Cross-platform mobile applications using React Native and modern mobile technologies.',
+    title: 'Mobile App',
+    description: 'Cross-platform mobile applications for iOS and Android using React Native.',
     features: [
-      'Cross-Platform Apps',
-      'Native Performance',
+      'iOS & Android Apps',
+      'Up to 10 Screens',
       'Push Notifications',
-      'Offline Functionality',
-      'App Store Deployment',
-      'Backend Integration'
+      'User Authentication',
+      'Backend Integration',
+      'App Store Submission Guide',
+      '30 Days Support'
     ],
-    startingPrice: 900,
-    timeline: '6-12 weeks',
+    startingPrice: 799,
+    timeline: '7-10 days',
     icon: 'Smartphone'
   },
   {
     id: 'branding-design',
-    title: 'Branding & Design',
-    description: 'Complete brand identity including logos, color schemes, and design systems.',
+    title: 'SEO Optimization',
+    description: 'Boost your search engine rankings with technical SEO and on-page optimization.',
     features: [
-      'Logo Design',
-      'Brand Guidelines',
-      'Color Palettes',
-      'Typography Systems',
-      'Marketing Materials',
-      'Design Systems'
+      'Technical SEO Audit',
+      'On-Page Optimization',
+      'Meta Tags & Descriptions',
+      'Site Speed Optimization',
+      'Google Search Console Setup',
+      'SEO Report'
     ],
-    startingPrice: 299,
-    timeline: '1-3 weeks',
+    startingPrice: 199,
+    timeline: '2-3 days',
     icon: 'Palette'
   }
 ]

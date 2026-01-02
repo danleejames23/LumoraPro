@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { usePathname } from 'next/navigation'
 import { Menu, X, Code, User, LogOut } from 'lucide-react'
 import { useAuth } from '@/contexts/auth-context'
 import QuoteTypeModal from '@/components/quote-type-modal'
 
 const Navigation = () => {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
@@ -21,6 +22,11 @@ const Navigation = () => {
     
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Hide navigation on client portal and admin pages
+  if (pathname?.startsWith('/client/dashboard') || pathname?.startsWith('/admin/dashboard')) {
+    return null
+  }
 
 
   const navItems = [
@@ -60,27 +66,37 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             {!isLoading && customer ? (
               <>
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="/client/dashboard">
-                    <User className="w-4 h-4 mr-2" />
-                    {customer.name}
-                  </Link>
-                </Button>
-                <Button variant="outline" size="sm" onClick={logout}>
+                <Link 
+                  href="/client/dashboard"
+                  className="inline-flex items-center px-3 py-1.5 text-sm border border-slate-700 rounded-lg hover:bg-slate-800 transition-colors"
+                >
+                  <User className="w-4 h-4 mr-2" />
+                  {customer.name}
+                </Link>
+                <button 
+                  onClick={logout}
+                  className="p-2 border border-slate-700 rounded-lg hover:bg-slate-800 transition-colors"
+                >
                   <LogOut className="w-4 h-4" />
-                </Button>
+                </button>
               </>
             ) : (
               <>
-                <Button variant="outline" size="sm" asChild>
-                  <Link href="/client">Client Portal</Link>
-                </Button>
-                <Button onClick={() => setIsQuoteModalOpen(true)}>
+                <Link 
+                  href="/client"
+                  className="px-3 py-1.5 text-sm border border-slate-700 rounded-lg hover:bg-slate-800 transition-colors"
+                >
+                  Client Portal
+                </Link>
+                <button 
+                  onClick={() => setIsQuoteModalOpen(true)}
+                  className="px-4 py-1.5 text-sm bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+                >
                   Get Quote
-                </Button>
+                </button>
               </>
             )}
           </div>
@@ -114,25 +130,37 @@ const Navigation = () => {
               <div className="px-3 py-2 space-y-2">
                 {!isLoading && customer ? (
                   <>
-                    <Button variant="outline" asChild className="w-full">
-                      <Link href="/client/dashboard" onClick={() => setIsOpen(false)}>
-                        <User className="w-4 h-4 mr-2" />
-                        {customer.name}
-                      </Link>
-                    </Button>
-                    <Button variant="outline" className="w-full" onClick={() => { logout(); setIsOpen(false); }}>
+                    <Link 
+                      href="/client/dashboard" 
+                      onClick={() => setIsOpen(false)}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-slate-700 rounded-lg hover:bg-slate-800 transition-colors"
+                    >
+                      <User className="w-4 h-4 mr-2" />
+                      {customer.name}
+                    </Link>
+                    <button 
+                      onClick={() => { logout(); setIsOpen(false); }}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-slate-700 rounded-lg hover:bg-slate-800 transition-colors"
+                    >
                       <LogOut className="w-4 h-4 mr-2" />
                       Logout
-                    </Button>
+                    </button>
                   </>
                 ) : (
                   <>
-                    <Button variant="outline" asChild className="w-full">
-                      <Link href="/client" onClick={() => setIsOpen(false)}>Client Portal</Link>
-                    </Button>
-                    <Button onClick={() => { setIsQuoteModalOpen(true); setIsOpen(false); }} className="w-full">
+                    <Link 
+                      href="/client" 
+                      onClick={() => setIsOpen(false)}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-slate-700 rounded-lg hover:bg-slate-800 transition-colors"
+                    >
+                      Client Portal
+                    </Link>
+                    <button 
+                      onClick={() => { setIsQuoteModalOpen(true); setIsOpen(false); }}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+                    >
                       Get Quote
-                    </Button>
+                    </button>
                   </>
                 )}
               </div>

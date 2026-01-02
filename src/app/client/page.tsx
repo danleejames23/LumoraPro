@@ -83,7 +83,7 @@ export default function ClientPortalPage() {
       const apiBase = typeof window !== 'undefined' && window.location.origin.startsWith('http')
         ? window.location.origin
         : 'http://localhost:3000'
-      const response = await fetch(`${apiBase}/api/quotes`, {
+      const response = await fetch(`${apiBase}/api/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -92,11 +92,7 @@ export default function ClientPortalPage() {
           name: data.name,
           email: data.email,
           password: data.password,
-          company: '',
-          description: 'Account created via registration',
-          estimatedCost: 0,
-          estimatedTimeline: '',
-          rushDelivery: 'standard'
+          company: ''
         })
       })
       

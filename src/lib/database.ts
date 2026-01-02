@@ -6,7 +6,11 @@ let pool: Pool | null = null
 
 export function getPool(): Pool {
   if (!pool) {
-    const connectionString = process.env.DATABASE_URL || 'postgresql://freelance_user:freelance_password_2024@localhost:5434/freelance_website'
+    const connectionString = process.env.DATABASE_URL
+    
+    if (!connectionString) {
+      throw new Error('DATABASE_URL environment variable is not set. Please configure your Supabase connection string in .env.local')
+    }
     
     // Detect if we're using a cloud PostgreSQL provider (Supabase, Neon, etc.)
     const isCloudDatabase = connectionString.includes('supabase.co') || 
