@@ -61,12 +61,8 @@ export default function ClientPortalPage() {
       if (result.success) {
         // Store auth token
         localStorage.setItem('auth_token', result.token)
-        // Force a page reload to trigger auth context update
-        window.location.reload()
-        // Then redirect to dashboard
-        setTimeout(() => {
-          window.location.href = '/client/dashboard'
-        }, 100)
+        // Redirect directly to dashboard
+        window.location.href = '/client/dashboard'
       } else {
         alert(result.error || 'Invalid email or password. Please check your credentials.')
       }
