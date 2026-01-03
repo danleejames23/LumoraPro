@@ -93,23 +93,27 @@ export default function AboutPage() {
   ]
 
   return (
-    <main className="pt-16">
+    <main className="pt-16 min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-background to-primary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="py-12 relative">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6"
             >
-              <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                  <span className="text-foreground">Hi, I'm </span>
-                  <span className="gradient-text">Daniel</span>
+              <div className="space-y-3">
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight">
+                  <span className="text-white">Hi, I'm </span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Daniel</span>
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-slate-400 leading-relaxed">
                   A passionate full-stack developer and AI specialist with 13+ years of experience creating 
                   beautiful websites, intelligent AI solutions, blockchain applications, and automated systems that help businesses grow.
                 </p>
@@ -181,19 +185,19 @@ export default function AboutPage() {
       </section>
 
       {/* My Story Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center space-y-4 mb-16"
+            className="text-center space-y-3 mb-10"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              My <span className="gradient-text">Story</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Story</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-slate-400">
               From curious beginner to experienced professional
             </p>
           </motion.div>
@@ -235,24 +239,24 @@ export default function AboutPage() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 bg-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 bg-slate-800/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center space-y-4 mb-16"
+            className="text-center space-y-3 mb-10"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              My <span className="gradient-text">Skills</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Skills</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-slate-400">
               Technologies I use to bring your ideas to life
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}
@@ -290,24 +294,24 @@ export default function AboutPage() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center space-y-4 mb-16"
+            className="text-center space-y-3 mb-10"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              My <span className="gradient-text">Experience</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Experience</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-slate-400">
               A journey of continuous learning and growth
             </p>
           </motion.div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {experience.map((exp, index) => (
               <motion.div
                 key={exp.year}
@@ -349,24 +353,24 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 bg-slate-800/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center space-y-4 mb-16"
+            className="text-center space-y-3 mb-10"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              My <span className="gradient-text">Values</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Values</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-slate-400">
               What drives me in every project
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -388,19 +392,19 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+      <section className="py-12 bg-gradient-to-br from-cyan-500/10 to-purple-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Ready to Work <span className="gradient-text">Together</span>?
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              Ready to Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Together</span>?
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-slate-400">
               Let's bring your ideas to life with professional web development that delivers results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

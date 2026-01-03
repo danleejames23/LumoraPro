@@ -18,24 +18,24 @@ export default function ServicesPage() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/10 to-cyan-500/10 text-purple-400 border border-purple-500/20 mb-8 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/10 to-cyan-500/10 text-purple-400 border border-purple-500/20 mb-4 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 animate-pulse" />
               <span>Services & Pricing</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
               Web Development &
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
                 AI Solutions
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-6">
               Professional web development services with transparent pricing and fast delivery. 
               From landing pages to custom AI applications.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-6">
               {[
                 { icon: Shield, text: 'Fixed Pricing' },
                 { icon: Zap, text: 'Fast Delivery' },
@@ -60,7 +60,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Service Categories - Enhanced Cards */}
-      <section className="py-16 border-t border-slate-800/50 relative">
+      <section className="py-10 border-t border-slate-800/50 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -87,21 +87,21 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="pb-20 relative">
+      <section className="pb-12 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-cyan-500/5 pointer-events-none" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-14">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
+          <div className="text-center mb-8">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-3">
               All Services
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
               Choose Your Service
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto">
               Quality solutions tailored to your needs
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
               <div
                 key={service.id}
@@ -160,25 +160,25 @@ export default function ServicesPage() {
       </section>
 
       {/* Custom Projects Section */}
-      <section className="py-20 border-t border-slate-800/50 relative">
+      <section className="py-12 border-t border-slate-800/50 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-4">
                 Enterprise & Custom Projects
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Need Something Bigger?
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">
                   Let&apos;s Talk Custom Solutions
                 </span>
               </h2>
-              <p className="text-lg text-slate-400 mb-6">
+              <p className="text-slate-400 mb-4">
                 For large-scale projects, enterprise applications, or complex requirements that go beyond our standard packages, 
                 I offer fully customized quotes tailored to your specific needs.
               </p>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-6">
                 {[
                   'Multi-platform applications & integrations',
                   'Enterprise-grade web applications',
@@ -244,14 +244,14 @@ export default function ServicesPage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 border-t border-slate-800/50 relative">
+      <section className="py-12 border-t border-slate-800/50 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-4">
               Process
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
               How It Works
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto">
@@ -259,7 +259,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-6">
             {[
               { step: '1', title: 'Discuss', description: 'Share your project requirements and goals', color: 'from-cyan-500 to-blue-600' },
               { step: '2', title: 'Quote', description: 'Receive a detailed quote with timeline', color: 'from-blue-500 to-purple-600' },

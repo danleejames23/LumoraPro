@@ -132,10 +132,19 @@ export async function POST(request: NextRequest) {
       customerId
     })
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error creating custom quote:', error)
+    
+    // Check if table doesn't exist
+    if (error.code === '42P01') {
+      return NextResponse.json(
+        { error: 'Database table not found. Please run the custom_quotes migration.' },
+        { status: 500 }
+      )
+    }
+    
     return NextResponse.json(
-      { error: 'Failed to submit custom quote request' },
+      { error: error.message || 'Failed to submit custom quote request' },
       { status: 500 }
     )
   } finally {

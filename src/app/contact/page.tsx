@@ -90,7 +90,7 @@ export default function ContactPage() {
   return (
     <main className="pt-16 min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Hero Section */}
-      <section className="py-16 lg:py-20">
+      <section className="py-10 lg:py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -98,13 +98,13 @@ export default function ContactPage() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
               Get In Touch
             </span>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-3">
               Let's Discuss Your Project
             </h1>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            <p className="text-slate-400 max-w-2xl mx-auto">
               Have a project in mind? Send us a message and we'll get back to you within 24 hours.
             </p>
           </motion.div>
@@ -151,10 +151,10 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-12">
+      <section className="pb-12">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 md:p-8">
-            <h2 className="text-xl font-bold text-white mb-6">Send a Message</h2>
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
+            <h2 className="text-lg font-bold text-white mb-4">Send a Message</h2>
             
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               {/* Project Type */}
