@@ -3206,7 +3206,7 @@ export default function ClientDashboard() {
                   className="space-y-4 mb-8"
                 >
                   <p className="text-muted-foreground leading-relaxed">
-                    Our development team is currently setting up your project repository. 
+                    Your developer is currently setting up your project repository. 
                     You'll be able to access your project files, documentation, and track 
                     development progress once it's ready.
                   </p>

@@ -115,7 +115,7 @@ export default function ContactPage() {
               </span>
             </h1>
             <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-              Have a project in mind? We&apos;d love to hear about it. Send us a message and we&apos;ll get back to you within 24 hours.
+              Have a project in mind? I&apos;d love to hear about it. Send me a message and I&apos;ll get back to you within 24 hours.
             </p>
           </div>
 
@@ -146,7 +146,7 @@ export default function ContactPage() {
               <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <Mail className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-white font-bold text-lg mb-1 group-hover:text-cyan-400 transition-colors">Email Us</h3>
+              <h3 className="text-white font-bold text-lg mb-1 group-hover:text-cyan-400 transition-colors">Email Me</h3>
               <p className="text-cyan-400 text-sm">hello@lumora.dev</p>
             </a>
             
@@ -188,8 +188,8 @@ export default function ContactPage() {
                   <span className="px-2 py-0.5 bg-green-500/20 text-green-400 text-xs rounded-full animate-pulse">Live</span>
                 </h3>
                 <p className="text-slate-400 text-sm">
-                  Register for our <span className="text-white font-medium">Client Portal</span> to access live chat with our development team. 
-                  Get instant answers, real-time project updates, and direct communication with the developers working on your project.
+                  Register for the <span className="text-white font-medium">Client Portal</span> to access live chat with me directly. 
+                  Get instant answers, real-time project updates, and direct communication throughout your project.
                 </p>
               </div>
               <Link 
@@ -209,8 +209,8 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 backdrop-blur-sm">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-white mb-2">Send Us a Message</h2>
-              <p className="text-slate-400 text-sm">Fill out the form below and we&apos;ll get back to you shortly</p>
+              <h2 className="text-2xl font-bold text-white mb-2">Send Me a Message</h2>
+              <p className="text-slate-400 text-sm">Fill out the form below and I&apos;ll get back to you shortly</p>
             </div>
             
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -280,7 +280,7 @@ export default function ContactPage() {
                   {...register('message')}
                   rows={5}
                   className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-none"
-                  placeholder="Tell us about your project, goals, and timeline..."
+                  placeholder="Tell me about your project, goals, and timeline..."
                 />
                 {errors.message && <p className="text-sm text-red-400 mt-1">{errors.message.message}</p>}
               </div>

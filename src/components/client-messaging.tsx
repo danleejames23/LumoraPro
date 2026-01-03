@@ -219,7 +219,7 @@ export default function ClientMessaging() {
           >
             <Card className="h-full flex flex-col shadow-2xl bg-card/95 backdrop-blur-md border border-border">
               <CardHeader className="flex-row items-center justify-between space-y-0 pb-3 border-b border-border/50">
-                <CardTitle className="text-lg font-bold text-cyber-mint">💻 Development Team</CardTitle>
+                <CardTitle className="text-lg font-bold text-cyber-mint">💻 Developer</CardTitle>
                 <div className="flex items-center space-x-2">
                   <Button
                     variant="ghost"
@@ -258,7 +258,7 @@ export default function ClientMessaging() {
                           }`}>
                             <div className="flex items-center gap-2 mb-1">
                               <span className="text-xs font-medium opacity-80">
-                                {message.sender_type === 'client' ? '👤 You' : '💻 Dev Team'}
+                                {message.sender_type === 'client' ? '👤 You' : '💻 Developer'}
                               </span>
                             </div>
                             <p className="text-sm">{message.message}</p>

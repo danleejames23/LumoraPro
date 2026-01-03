@@ -1244,7 +1244,7 @@ export async function createMessageNotification(customerId: string, messageCount
     customer_id: customerId,
     type: 'message',
     title: 'New Message',
-    message: `You have ${messageCount} new message${messageCount > 1 ? 's' : ''} from the development team`,
+    message: `You have ${messageCount} new message${messageCount > 1 ? 's' : ''} from your developer`,
     is_read: false,
     action_url: `/client/dashboard?tab=messages`,
     priority: 'medium',

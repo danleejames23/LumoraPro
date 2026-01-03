@@ -381,7 +381,7 @@ export default function ClientPortalPage() {
                   {
                     icon: '💬',
                     title: 'Direct Communication',
-                    description: 'Chat directly with your development team and get instant updates.'
+                    description: 'Chat directly with your developer and get instant updates.'
                   },
                   {
                     icon: '📁',

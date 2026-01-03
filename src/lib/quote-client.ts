@@ -144,7 +144,7 @@ export function sendWelcomeEmail(customer: CustomerAccount, tempPassword: string
     We'll review your requirements and get back to you within 24 hours.
     
     Best regards,
-    Development Team
+    Daniel @ Lumora Pro
   `)
 }
 

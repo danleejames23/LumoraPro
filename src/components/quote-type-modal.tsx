@@ -84,7 +84,7 @@ export default function QuoteTypeModal({ isOpen, onClose }: QuoteTypeModalProps)
               </li>
             </ul>
             <Link 
-              href="/quote" 
+              href="/custom-quote" 
               onClick={onClose}
               className="w-full inline-flex items-center justify-center px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white text-sm font-medium rounded-lg transition-colors"
             >

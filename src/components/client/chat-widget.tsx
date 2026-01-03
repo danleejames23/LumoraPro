@@ -1,5 +1,5 @@
 'use client'
-// UPDATED: Fixed transparency and changed title to Development Team - v2.0
+// UPDATED: Fixed transparency and changed title to Developer - v2.1
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -114,7 +114,7 @@ export default function ClientChatWidget({ customerId }: ClientChatWidgetProps) 
             <Card className="h-full border-0 bg-white dark:bg-gray-900">
               <CardHeader className="pb-3 border-b border-border/50">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-lg font-bold text-cyber-mint">💻 Development Team</CardTitle>
+                  <CardTitle className="text-lg font-bold text-cyber-mint">💻 Developer</CardTitle>
                   <Button
                     variant="ghost"
                     size="sm"
@@ -143,7 +143,7 @@ export default function ClientChatWidget({ customerId }: ClientChatWidgetProps) 
                         }`}>
                           <div className="flex items-center gap-2 mb-1">
                             <span className="text-xs font-medium opacity-80">
-                              {message.sender_type === 'client' ? '👤 You' : '💻 Dev Team'}
+                              {message.sender_type === 'client' ? '👤 You' : '💻 Developer'}
                             </span>
                           </div>
                           <p className="text-sm">{message.message}</p>

@@ -18,20 +18,20 @@ export default function Home() {
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/10 to-purple-500/10 text-cyan-400 border border-cyan-500/20 mb-6 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 animate-pulse" />
-              <span>Full-Service Digital Agency</span>
+              <span>Solo-Led Digital Studio</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              We Build Digital Products
+              Fast, Conversion-Focused
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
-                That Drive Growth
+                Websites & Shopify Stores
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
-              From stunning websites to powerful mobile apps and custom SaaS platforms. 
-              We handle everything from design to deployment, with a dedicated client portal 
-              where you can manage your entire project.
+              I build websites and Shopify stores that actually convert. Fixed pricing, 
+              fast delivery, and direct communication with me throughout your project. 
+              No agency fluff—just real results for your business.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
@@ -39,14 +39,14 @@ export default function Home() {
                 href="/quote"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105"
               >
-                Start Your Project
+                Get a Quote
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                href="/services"
+                href="/portfolio"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-slate-800/80 hover:bg-slate-700 text-white font-semibold rounded-xl transition-all duration-300 border border-slate-700 hover:border-cyan-500/50 backdrop-blur-sm"
               >
-                Explore Services
+                View Work
                 <Sparkles className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
             </div>
@@ -71,7 +71,7 @@ export default function Home() {
                 { icon: Shield, text: 'Fixed Pricing' },
                 { icon: Zap, text: 'Fast Delivery' },
                 { icon: Star, text: 'Free Revisions' },
-                { icon: Users, text: '24/7 Support' },
+                { icon: Users, text: 'Direct Communication' },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/50 border border-slate-700/50 backdrop-blur-sm">
                   <item.icon className="w-3.5 h-3.5 text-cyan-400" />
@@ -83,17 +83,105 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Build - Comprehensive Services */}
+      {/* Shopify Services Section */}
+      <section className="py-16 border-t border-slate-800/50 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/5 to-transparent pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-12">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20 mb-4">
+              Shopify Specialist
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Shopify Services</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Fixed pricing, fast turnaround, and builds focused on what matters—getting you more sales. 
+              No Shopify Plus complexity, just practical solutions for growing stores.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Shopify Store Setup */}
+            <div className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <ShoppingCart className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Shopify Store Setup</h3>
+              <p className="text-sm text-slate-400 mb-4">Complete store setup for new Shopify merchants. Get selling fast with a professional, mobile-optimised store.</p>
+              <div className="space-y-2 mb-4">
+                {['Theme setup & configuration', 'Homepage + essential pages', 'Payments & shipping setup', 'Mobile optimisation'].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-slate-300">
+                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                <span className="text-green-400 font-semibold">£299–£799</span>
+                <Link href="/custom-quote" className="text-sm text-slate-400 hover:text-white flex items-center gap-1">
+                  Get Quote <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Shopify Theme Customisation */}
+            <div className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Palette className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Theme Customisation</h3>
+              <p className="text-sm text-slate-400 mb-4">Make your existing Shopify theme match your brand perfectly. Layout tweaks, styling, and UX improvements.</p>
+              <div className="space-y-2 mb-4">
+                {['Edit existing themes', 'Layout & section changes', 'Branding & styling tweaks', 'Speed & UX improvements'].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-slate-300">
+                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                <span className="text-green-400 font-semibold">From £149</span>
+                <Link href="/custom-quote" className="text-sm text-slate-400 hover:text-white flex items-center gap-1">
+                  Get Quote <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Shopify Conversion Optimisation */}
+            <div className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10">
+              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Conversion Optimisation</h3>
+              <p className="text-sm text-slate-400 mb-4">Turn more visitors into buyers. Product page improvements, cart UX, and trust-building elements.</p>
+              <div className="space-y-2 mb-4">
+                {['Product page improvements', 'Cart & checkout UX tweaks', 'Trust & conversion elements', 'Mobile-first optimisation'].map((item) => (
+                  <div key={item} className="flex items-center gap-2 text-sm text-slate-300">
+                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                <span className="text-green-400 font-semibold">From £249</span>
+                <Link href="/custom-quote" className="text-sm text-slate-400 hover:text-white flex items-center gap-1">
+                  Get Quote <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Services */}
       <section className="py-16 border-t border-slate-800/50 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
-              Our Expertise
+              Full-Stack Development
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Everything Digital, Under One Roof</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Beyond Shopify</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              We don&apos;t just build websites. We create complete digital solutions tailored to your business needs.
+              Need something custom? I also build websites, web apps, and integrate AI solutions for businesses.
             </p>
           </div>
 
@@ -106,30 +194,6 @@ export default function Home() {
                 features: ['Responsive Design', 'SEO Optimized', 'Fast Loading'],
                 price: 'From £149',
                 color: 'from-cyan-500 to-blue-600'
-              },
-              { 
-                icon: Smartphone, 
-                title: 'Mobile Applications', 
-                desc: 'Native and cross-platform mobile apps for iOS and Android. Intuitive UX that users love.',
-                features: ['iOS & Android', 'Push Notifications', 'Offline Support'],
-                price: 'From £1,999',
-                color: 'from-purple-500 to-pink-600'
-              },
-              { 
-                icon: Layers, 
-                title: 'SaaS Platforms', 
-                desc: 'Custom software-as-a-service solutions with user management, billing, and scalable architecture.',
-                features: ['Multi-tenant', 'Subscription Billing', 'API Integration'],
-                price: 'From £4,999',
-                color: 'from-orange-500 to-red-600'
-              },
-              { 
-                icon: ShoppingCart, 
-                title: 'E-Commerce Stores', 
-                desc: 'Full-featured online stores with payment processing, inventory management, and order tracking.',
-                features: ['Payment Gateway', 'Inventory System', 'Order Management'],
-                price: 'From £549',
-                color: 'from-green-500 to-emerald-600'
               },
               { 
                 icon: Bot, 
@@ -164,7 +228,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
                   <span className="text-cyan-400 font-semibold">{service.price}</span>
-                  <Link href="/quote" className="text-sm text-slate-400 hover:text-white flex items-center gap-1">
+                  <Link href="/custom-quote" className="text-sm text-slate-400 hover:text-white flex items-center gap-1">
                     Get Quote <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
@@ -190,7 +254,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-slate-400 mb-6">
-                No more endless email chains or confusing spreadsheets. Our dedicated client portal 
+                No more endless email chains or confusing spreadsheets. My dedicated client portal 
                 gives you complete visibility and control over your project from start to finish.
               </p>
               
@@ -198,7 +262,7 @@ export default function Home() {
                 {[
                   { icon: FileText, title: 'Track Quotes & Invoices', desc: 'View all your quotes, accept proposals, and manage payments in one place.' },
                   { icon: BarChart3, title: 'Real-Time Progress', desc: 'See exactly where your project stands with live progress updates.' },
-                  { icon: MessageSquare, title: 'Live Developer Chat', desc: 'Chat directly with our development team in real-time. Get instant answers and updates.', highlight: true },
+                  { icon: MessageSquare, title: 'Live Developer Chat', desc: 'Chat directly with me in real-time. Get instant answers and updates.', highlight: true },
                   { icon: CreditCard, title: 'Secure Payments', desc: 'Pay invoices securely online with multiple payment options.' },
                 ].map((feature) => (
                   <div key={feature.title} className={`flex gap-4 ${feature.highlight ? 'p-3 bg-green-500/5 border border-green-500/20 rounded-xl' : ''}`}>
@@ -290,9 +354,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: '01', icon: MessageSquare, title: 'Discuss', desc: 'Tell us about your project and goals', color: 'from-cyan-500 to-blue-600' },
+              { step: '01', icon: MessageSquare, title: 'Discuss', desc: 'Tell me about your project and goals', color: 'from-cyan-500 to-blue-600' },
               { step: '02', icon: FileText, title: 'Quote', desc: 'Get a detailed quote with fixed pricing', color: 'from-purple-500 to-pink-600' },
-              { step: '03', icon: Code, title: 'Build', desc: 'We build while you track progress live', color: 'from-orange-500 to-red-600' },
+              { step: '03', icon: Code, title: 'Build', desc: 'I build while you track progress live', color: 'from-orange-500 to-red-600' },
               { step: '04', icon: Rocket, title: 'Launch', desc: 'Go live with ongoing support included', color: 'from-green-500 to-emerald-600' },
             ].map((item, index) => (
               <div key={item.step} className="relative text-center">
@@ -311,16 +375,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Why Choose Me */}
       <section className="py-16 border-t border-slate-800/50 relative">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20 mb-4">
-              Why Us
+              Why Work With Me
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">The Lumora Difference</h2>
             <p className="text-slate-400 max-w-xl mx-auto">
-              We&apos;re not just developers. We&apos;re your digital partners.
+              Direct access to a senior developer. No account managers, no middlemen.
             </p>
           </div>
 
@@ -329,7 +393,7 @@ export default function Home() {
               { icon: Shield, title: 'Fixed Pricing', desc: 'Know exactly what you\'ll pay. No surprises, no hidden fees.', color: 'from-cyan-500 to-blue-600' },
               { icon: Zap, title: 'Fast Delivery', desc: 'Most projects delivered in 1-2 weeks, not months.', color: 'from-yellow-500 to-orange-600' },
               { icon: Award, title: 'Quality Code', desc: 'Clean, modern, scalable code built to last.', color: 'from-purple-500 to-pink-600' },
-              { icon: Users, title: 'Ongoing Support', desc: 'Free support included. We\'re here when you need us.', color: 'from-green-500 to-emerald-600' },
+              { icon: Users, title: 'Ongoing Support', desc: 'Free support included. I\'m here when you need me.', color: 'from-green-500 to-emerald-600' },
             ].map((feature) => (
               <div key={feature.title} className="group text-center p-6 bg-slate-800/30 rounded-2xl border border-slate-700/50 hover:border-cyan-500/30 transition-all duration-500">
                 <div className={`w-14 h-14 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -359,8 +423,8 @@ export default function Home() {
             Let&apos;s Build Something Amazing Together
           </h2>
           <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
-            Whether you need a simple website or a complex SaaS platform, we&apos;ve got you covered. 
-            Get a free quote today and see how we can bring your vision to life.
+            Whether you need a Shopify store, a landing page, or a custom web app, I&apos;ve got you covered. 
+            Get a free quote today and let&apos;s bring your vision to life.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

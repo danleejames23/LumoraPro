@@ -24,15 +24,15 @@ export default function ServicesPage() {
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              Web Development &
+              Websites, Shopify &
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
-                AI Solutions
+                Custom Development
               </span>
             </h1>
 
             <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-6">
-              Professional web development services with transparent pricing and fast delivery. 
-              From landing pages to custom AI applications.
+              Fixed pricing, fast delivery, and direct communication throughout. 
+              I specialise in Shopify stores and conversion-focused websites.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-6">
@@ -65,10 +65,10 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-10">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-4">
-              What We Build
+              What I Build
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Our Core Expertise</h2>
-            <p className="text-slate-400 max-w-xl mx-auto">Specialized solutions across all digital platforms</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Core Services</h2>
+            <p className="text-slate-400 max-w-xl mx-auto">Focused expertise across key digital platforms</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -245,9 +245,9 @@ export default function ServicesPage() {
                 </div>
                 
                 <div className="text-center pt-6 border-t border-slate-700/50">
-                  <div className="text-slate-400 mb-2">Starting from</div>
-                  <div className="text-4xl font-bold text-white mb-1">£1,500+</div>
-                  <div className="text-sm text-slate-500">Based on project scope</div>
+                  <div className="text-slate-400 mb-2">Pricing</div>
+                  <div className="text-2xl font-bold text-white mb-1">Custom Quote</div>
+                  <div className="text-sm text-slate-500">Tailored to your project needs</div>
                 </div>
               </div>
             </div>
@@ -261,10 +261,10 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-4">
-              Our Process
+              My Process
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              How We Bring Your Vision to Life
+              How I Bring Your Vision to Life
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               A streamlined, transparent process designed to deliver exceptional results every time
@@ -273,10 +273,10 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: '01', icon: MessageSquare, title: 'Discuss', description: 'Share your vision, goals, and requirements. We listen and understand your needs.', color: 'from-cyan-500 to-blue-600' },
+              { step: '01', icon: MessageSquare, title: 'Discuss', description: 'Share your vision, goals, and requirements. I listen and understand your needs.', color: 'from-cyan-500 to-blue-600' },
               { step: '02', icon: FileText, title: 'Quote', description: 'Receive a detailed proposal with fixed pricing, timeline, and deliverables.', color: 'from-purple-500 to-pink-600' },
-              { step: '03', icon: Code, title: 'Build', description: 'We develop your project with regular updates. Track progress in your client portal.', color: 'from-orange-500 to-red-600' },
-              { step: '04', icon: Rocket, title: 'Launch', description: 'Go live with confidence. We provide ongoing support and maintenance.', color: 'from-green-500 to-emerald-600' }
+              { step: '03', icon: Code, title: 'Build', description: 'I develop your project with regular updates. Track progress in your client portal.', color: 'from-orange-500 to-red-600' },
+              { step: '04', icon: Rocket, title: 'Launch', description: 'Go live with confidence. I provide ongoing support and maintenance.', color: 'from-green-500 to-emerald-600' }
             ].map((item, index) => (
               <div key={item.step} className="group text-center relative">
                 {index < 3 && (
@@ -328,7 +328,7 @@ export default function ServicesPage() {
             Ready to Start Your Project?
           </h2>
           <p className="text-lg text-slate-400 mb-10 max-w-xl mx-auto">
-            Get a free quote today. No commitment, just a clear understanding of what we can build together.
+            Get a free quote today. No commitment, just a clear understanding of what I can build for you.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -343,7 +343,7 @@ export default function ServicesPage() {
               href="/contact"
               className="group inline-flex items-center justify-center px-10 py-4 bg-slate-800/80 hover:bg-slate-700 text-white font-semibold rounded-xl transition-all duration-300 border border-slate-700 hover:border-cyan-500/50 backdrop-blur-sm"
             >
-              Contact Us
+              Get In Touch
               <Sparkles className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </div>

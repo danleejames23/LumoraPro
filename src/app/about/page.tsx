@@ -47,12 +47,13 @@ export default function AboutPage() {
 
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Daniel</span>
-                <span className="block text-2xl md:text-3xl mt-2 text-slate-300">Full-Stack Developer & Digital Architect</span>
+                <span className="block text-2xl md:text-3xl mt-2 text-slate-300">Solo-Led Digital Studio</span>
               </h1>
 
               <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-                With over 13 years of experience, I&apos;ve helped businesses of all sizes transform their digital presence. 
-                From stunning websites to powerful mobile apps and AI solutions, I bring ideas to life with clean code and creative design.
+                I&apos;m a full-stack developer specialising in websites and Shopify stores. With over 13 years of experience, 
+                I help small businesses and founders build digital products that actually convert. No agency overhead, 
+                just direct communication and quality work.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
