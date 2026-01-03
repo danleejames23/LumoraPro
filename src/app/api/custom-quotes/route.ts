@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { query } from '@/lib/db'
+import { getDatabase } from '@/lib/database'
 import bcrypt from 'bcryptjs'
 
 // POST - Submit a new custom quote request (with optional user registration)
 export async function POST(request: NextRequest) {
+  const client = await getDatabase()
   try {
     const body = await request.json()
     
@@ -50,7 +51,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user exists
-    const existingUser = await query(
+    const existingUser = await client.query(
       'SELECT id FROM customers WHERE email = $1',
       [email.toLowerCase()]
     )
@@ -64,7 +65,7 @@ export async function POST(request: NextRequest) {
       // Create new user account
       const passwordHash = await bcrypt.hash(password, 12)
       
-      const newUser = await query(
+      const newUser = await client.query(
         `INSERT INTO customers (first_name, last_name, email, password_hash, phone, company)
          VALUES ($1, $2, $3, $4, $5, $6)
          RETURNING id`,
@@ -75,7 +76,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Insert custom quote request
-    const result = await query(
+    const result = await client.query(
       `INSERT INTO custom_quotes (
         customer_id,
         first_name,
@@ -137,11 +138,14 @@ export async function POST(request: NextRequest) {
       { error: 'Failed to submit custom quote request' },
       { status: 500 }
     )
+  } finally {
+    client.release()
   }
 }
 
 // GET - Get custom quotes for a customer
 export async function GET(request: NextRequest) {
+  const client = await getDatabase()
   try {
     const { searchParams } = new URL(request.url)
     const customerId = searchParams.get('customerId')
@@ -153,7 +157,7 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const result = await query(
+    const result = await client.query(
       `SELECT * FROM custom_quotes 
        WHERE customer_id = $1 
        ORDER BY created_at DESC`,
@@ -171,5 +175,7 @@ export async function GET(request: NextRequest) {
       { error: 'Failed to fetch custom quotes' },
       { status: 500 }
     )
+  } finally {
+    client.release()
   }
 }

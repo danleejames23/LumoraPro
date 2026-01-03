@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { query } from '@/lib/db'
+import { getDatabase } from '@/lib/database'
 
 // GET - Get all custom quotes for admin
 export async function GET(request: NextRequest) {
+  const client = await getDatabase()
   try {
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status')
@@ -23,7 +24,7 @@ export async function GET(request: NextRequest) {
 
     sql += ' ORDER BY cq.created_at DESC'
 
-    const result = await query(sql, params)
+    const result = await client.query(sql, params)
 
     return NextResponse.json({
       success: true,
@@ -36,11 +37,14 @@ export async function GET(request: NextRequest) {
       { error: 'Failed to fetch custom quotes' },
       { status: 500 }
     )
+  } finally {
+    client.release()
   }
 }
 
 // PATCH - Update custom quote status, add pricing, approve/reject
 export async function PATCH(request: NextRequest) {
+  const client = await getDatabase()
   try {
     const body = await request.json()
     const { 
@@ -60,7 +64,7 @@ export async function PATCH(request: NextRequest) {
     }
 
     // Get the custom quote first
-    const existingQuote = await query(
+    const existingQuote = await client.query(
       'SELECT * FROM custom_quotes WHERE id = $1',
       [customQuoteId]
     )
@@ -77,14 +81,14 @@ export async function PATCH(request: NextRequest) {
     // If approving with a price, create a formal quote and project
     if (status === 'approved' && quotedPrice) {
       // Generate quote ID
-      const quoteCountResult = await query(
+      const quoteCountResult = await client.query(
         "SELECT COUNT(*) FROM quotes WHERE quote_id LIKE 'QT-' || to_char(CURRENT_DATE, 'YYYY') || '-%'"
       )
       const quoteCount = parseInt(quoteCountResult.rows[0].count) + 1
       const quoteId = `QT-${new Date().getFullYear()}-${String(quoteCount).padStart(3, '0')}`
 
       // Create the formal quote
-      const newQuote = await query(
+      const newQuote = await client.query(
         `INSERT INTO quotes (
           quote_id, customer_id, name, email, company, description,
           estimated_cost, estimated_timeline, status, selected_package
@@ -110,7 +114,7 @@ export async function PATCH(request: NextRequest) {
       )
 
       // Create a project in planning status
-      const newProject = await query(
+      const newProject = await client.query(
         `INSERT INTO projects (
           customer_id, quote_id, name, description, status
         ) VALUES ($1, $2, $3, $4, 'planning')
@@ -124,7 +128,7 @@ export async function PATCH(request: NextRequest) {
       )
 
       // Update the custom quote with references
-      await query(
+      await client.query(
         `UPDATE custom_quotes SET
           status = $1,
           admin_notes = $2,
@@ -150,7 +154,7 @@ export async function PATCH(request: NextRequest) {
 
       // Create notification for customer
       if (customQuote.customer_id) {
-        await query(
+        await client.query(
           `INSERT INTO notifications (customer_id, type, title, message)
            VALUES ($1, 'quote_ready', 'Custom Quote Ready', $2)`,
           [
@@ -169,7 +173,7 @@ export async function PATCH(request: NextRequest) {
 
     } else {
       // Just update status/notes without creating quote
-      await query(
+      await client.query(
         `UPDATE custom_quotes SET
           status = COALESCE($1, status),
           admin_notes = COALESCE($2, admin_notes),
@@ -199,7 +203,7 @@ export async function PATCH(request: NextRequest) {
         }
 
         if (notificationMessage) {
-          await query(
+          await client.query(
             `INSERT INTO notifications (customer_id, type, title, message)
              VALUES ($1, 'quote_update', 'Quote Request Update', $2)`,
             [customQuote.customer_id, notificationMessage]
@@ -219,5 +223,7 @@ export async function PATCH(request: NextRequest) {
       { error: 'Failed to update custom quote' },
       { status: 500 }
     )
+  } finally {
+    client.release()
   }
 }
