@@ -142,11 +142,11 @@ export default function ClientPortalPage() {
             className="text-center space-y-4 mb-12"
           >
             <h1 className="text-4xl md:text-5xl font-bold">
-              <span className="text-foreground">Client </span>
-              <span className="gradient-text">Portal</span>
+              <span className="text-foreground">Your Project </span>
+              <span className="gradient-text">Hub</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Access your project dashboard, track progress, communicate with our team, and manage your account.
+              Access your project dashboard, track progress, communicate directly with me, and manage your account.
             </p>
           </motion.div>
 

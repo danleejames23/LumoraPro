@@ -83,95 +83,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Shopify Services Section */}
-      <section className="py-16 border-t border-slate-800/50 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/5 to-transparent pointer-events-none" />
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20 mb-4">
-              Shopify Specialist
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Shopify Services</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
-              Fixed pricing, fast turnaround, and builds focused on what matters—getting you more sales. 
-              No Shopify Plus complexity, just practical solutions for growing stores.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {/* Shopify Store Setup */}
-            <div className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <ShoppingCart className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Shopify Store Setup</h3>
-              <p className="text-sm text-slate-400 mb-4">Complete store setup for new Shopify merchants. Get selling fast with a professional, mobile-optimised store.</p>
-              <div className="space-y-2 mb-4">
-                {['Theme setup & configuration', 'Homepage + essential pages', 'Payments & shipping setup', 'Mobile optimisation'].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm text-slate-300">
-                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-                <span className="text-green-400 font-semibold">£299–£799</span>
-                <Link href="/custom-quote" className="text-sm text-slate-400 hover:text-white flex items-center gap-1">
-                  Get Quote <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Shopify Theme Customisation */}
-            <div className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Palette className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Theme Customisation</h3>
-              <p className="text-sm text-slate-400 mb-4">Make your existing Shopify theme match your brand perfectly. Layout tweaks, styling, and UX improvements.</p>
-              <div className="space-y-2 mb-4">
-                {['Edit existing themes', 'Layout & section changes', 'Branding & styling tweaks', 'Speed & UX improvements'].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm text-slate-300">
-                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-                <span className="text-green-400 font-semibold">From £149</span>
-                <Link href="/custom-quote" className="text-sm text-slate-400 hover:text-white flex items-center gap-1">
-                  Get Quote <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Shopify Conversion Optimisation */}
-            <div className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-green-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-green-500/10">
-              <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <TrendingUp className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Conversion Optimisation</h3>
-              <p className="text-sm text-slate-400 mb-4">Turn more visitors into buyers. Product page improvements, cart UX, and trust-building elements.</p>
-              <div className="space-y-2 mb-4">
-                {['Product page improvements', 'Cart & checkout UX tweaks', 'Trust & conversion elements', 'Mobile-first optimisation'].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm text-slate-300">
-                    <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-                <span className="text-green-400 font-semibold">From £249</span>
-                <Link href="/custom-quote" className="text-sm text-slate-400 hover:text-white flex items-center gap-1">
-                  Get Quote <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Other Services */}
+      {/* Main Services */}
       <section className="py-16 border-t border-slate-800/50 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -179,13 +91,13 @@ export default function Home() {
             <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
               Full-Stack Development
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Beyond Shopify</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Core Services</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
-              Need something custom? I also build websites, web apps, and integrate AI solutions for businesses.
+              I build websites, web apps, and integrate AI solutions for businesses.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               { 
                 icon: Globe, 
